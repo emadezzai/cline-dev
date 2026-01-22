@@ -256,7 +256,10 @@ export const CommandOutputRow = memo(
 					{isSubagentCommand && subagentPrompt && (
 						<div className="p-2.5 border-b border-editor-group-border">
 							<div className="mb-0">
-								<strong>Prompt:</strong> <span className="ph-no-capture font-editor">{subagentPrompt}</span>
+								<strong>Prompt:</strong>{" "}
+								<span className="ph-no-capture font-editor" dir="auto">
+									{subagentPrompt}
+								</span>
 							</div>
 						</div>
 					)}

@@ -25,13 +25,19 @@ export const TypewriterText = memo(({ text, speed = 30 }: { text: string; speed?
 	// After typing completes, show shimmer effect instead of blinking cursor
 	if (isComplete) {
 		return (
-			<span className="animate-shimmer bg-linear-90 from-foreground to-description bg-[length:200%_100%] bg-clip-text text-transparent truncate">
+			<span
+				className="animate-shimmer bg-linear-90 from-foreground to-description bg-[length:200%_100%] bg-clip-text text-transparent truncate"
+				dir="auto">
 				{text}
 			</span>
 		)
 	}
 
-	return <span className="truncate">{text.slice(0, displayedLength)}</span>
+	return (
+		<span className="truncate" dir="auto">
+			{text.slice(0, displayedLength)}
+		</span>
+	)
 })
 
 TypewriterText.displayName = "TypewriterText"

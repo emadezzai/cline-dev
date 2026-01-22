@@ -1534,6 +1534,7 @@ const ChatTextArea = forwardRef<HTMLTextAreaElement, ChatTextAreaProps>(
 								? "left-3.5 right-3.5"
 								: "left-3.5 right-3.5 border border-input-border",
 						)}
+						dir="auto"
 						ref={highlightLayerRef}
 						style={{
 							position: "absolute",
@@ -1556,6 +1557,7 @@ const ChatTextArea = forwardRef<HTMLTextAreaElement, ChatTextAreaProps>(
 					<DynamicTextArea
 						autoFocus={true}
 						data-testid="chat-input"
+						dir="auto"
 						maxRows={10}
 						minRows={3}
 						onBlur={handleBlur}

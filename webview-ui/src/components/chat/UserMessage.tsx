@@ -90,6 +90,7 @@ const UserMessage: React.FC<UserMessageProps> = ({ text, images, files, messageT
 	return (
 		<div
 			className="p-2.5 pr-1 my-1 text-badge-foreground rounded-xs"
+			dir="auto"
 			onClick={handleClick}
 			style={{
 				backgroundColor: isEditing ? "unset" : "var(--vscode-badge-background)",
@@ -100,6 +101,7 @@ const UserMessage: React.FC<UserMessageProps> = ({ text, images, files, messageT
 				<>
 					<DynamicTextArea
 						autoFocus
+						dir="auto"
 						onBlur={(e) => handleBlur(e)}
 						onChange={(e) => setEditedText(e.target.value)}
 						onKeyDown={handleKeyDown}
@@ -145,7 +147,7 @@ const UserMessage: React.FC<UserMessageProps> = ({ text, images, files, messageT
 					</div>
 				</>
 			) : (
-				<span className="ph-no-capture text-sm" style={{ display: "block" }}>
+				<span className="ph-no-capture text-sm" dir="auto" style={{ display: "block" }}>
 					{highlightedText}
 				</span>
 			)}

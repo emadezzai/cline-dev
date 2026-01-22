@@ -390,7 +390,7 @@ const MarkdownBlock = memo(({ markdown, compact, showCursor }: MarkdownBlockProp
 	}, [markdown, setMarkdown])
 
 	return (
-		<div className="inline-markdown-block">
+		<div className="inline-markdown-block" dir="auto">
 			<span
 				className={cn("inline [&>p]:mt-0", {
 					"inline-cursor-container": showCursor,

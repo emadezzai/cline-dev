@@ -618,7 +618,9 @@ export const ChatRowContent = memo(
 												<div className="grow" />
 												<span className="codicon codicon-chevron-up my-0.5 shrink-0" />
 											</div>
-											<span className="ph-no-capture break-words whitespace-pre-wrap">{tool.content}</span>
+											<span className="ph-no-capture break-words whitespace-pre-wrap" dir="auto">
+												{tool.content}
+											</span>
 										</div>
 									) : (
 										<div className="flex items-center">
